@@ -44,9 +44,9 @@ function plugin_version_ninjaone(): array
     return [
         'name'           => 'NinjaOne connector',
         'version'        => PLUGIN_NINJAONE_VERSION,
-        'author'         => 'DooSys',
+        'author'         => 'TiniSys IT Solutions',
         'license'        => 'GPLv3+',
-        'homepage'       => 'https://github.com/DooSys/glpi-ninjaone-connector',
+        'homepage'       => 'https://github.com/TiniSys-IT-Solutions/glpi-ninjaone-connector',
         'requirements'   => [
             'glpi' => [
                 'min' => PLUGIN_NINJAONE_MIN_GLPI_VERSION,

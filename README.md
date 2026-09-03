@@ -8,10 +8,10 @@
   <img src="https://img.shields.io/badge/PowerShell-7+-5391FE?style=for-the-badge&logo=powershell&logoColor=white" alt="PowerShell 7+" />
 </p>
 <p align="center">
-  <img src="https://img.shields.io/github/license/DooSys/glpi-ninjaone-connector?style=for-the-badge" alt="License" />
-  <img src="https://img.shields.io/github/stars/DooSys/glpi-ninjaone-connector?style=for-the-badge" alt="Stars" />
-  <img src="https://img.shields.io/github/last-commit/DooSys/glpi-ninjaone-connector?style=for-the-badge" alt="Last Commit" />
-  <img src="https://img.shields.io/github/issues/DooSys/glpi-ninjaone-connector?style=for-the-badge" alt="Issues" />
+  <img src="https://img.shields.io/github/license/TiniSys-IT-Solutions/glpi-ninjaone-connector?style=for-the-badge" alt="License" />
+  <img src="https://img.shields.io/github/stars/TiniSys-IT-Solutions/glpi-ninjaone-connector?style=for-the-badge" alt="Stars" />
+  <img src="https://img.shields.io/github/last-commit/TiniSys-IT-Solutions/glpi-ninjaone-connector?style=for-the-badge" alt="Last Commit" />
+  <img src="https://img.shields.io/github/issues/TiniSys-IT-Solutions/glpi-ninjaone-connector?style=for-the-badge" alt="Issues" />
 </p>
 
 # GLPI NinjaOne Connector
@@ -260,6 +260,9 @@ Native GLPI computers are not deleted during uninstall.
 - Protect database access to the plugin tables.
 - NinjaOne secrets and tokens are stored in plugin tables and should be handled as sensitive data.
 
+See the repository [security policy](SECURITY.md) for supported versions,
+deployment guidance and responsible vulnerability reporting.
+
 ## Known Limitations
 
 - NinjaOne deletions do not automatically delete GLPI assets.
@@ -267,6 +270,19 @@ Native GLPI computers are not deleted during uninstall.
 - Management and Control scopes are reserved for future features.
 - Application-level encryption of stored NinjaOne secrets should be hardened before broad production distribution.
 - Real tenant validation is still recommended before production rollout.
+
+## Contributing
+
+Focused fixes and improvements are welcome. Read the
+[contribution guide](CONTRIBUTING.md) before opening a pull request. User-facing
+changes should also be recorded in the [changelog](CHANGELOG.md).
+
+## Project identity
+
+This connector is independently developed and maintained by TiniSys IT
+Solutions. NinjaOne and GLPI are trademarks of their respective owners. This
+project is an independent integration and is not endorsed by or affiliated
+with either vendor.
 
 ## License
 

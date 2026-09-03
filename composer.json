@@ -1,8 +1,13 @@
 {
-  "name": "uopslab/glpi-ninjaone",
+  "name": "tinisys-it-solutions/glpi-ninjaone-connector",
   "description": "GLPI 11 plugin to synchronize NinjaOne inventory into native GLPI assets.",
   "type": "glpi-plugin",
   "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "TiniSys IT Solutions"
+    }
+  ],
   "require": {
     "php": ">=8.2"
   },
@@ -12,4 +17,3 @@
     }
   }
 }
-
