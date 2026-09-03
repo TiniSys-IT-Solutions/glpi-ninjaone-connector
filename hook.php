@@ -4,7 +4,7 @@ function plugin_ninjaone_install(): bool
 {
     global $DB;
 
-    $migration = new Migration(PLUGIN_NINJAONE_VERSION);
+    $migration = new Migration(PLUGIN_NINJAONE_SCHEMA_VERSION);
     $default_charset = DBConnection::getDefaultCharset();
     $default_collation = DBConnection::getDefaultCollation();
     $default_key_sign = DBConnection::getDefaultPrimaryKeySignOption();

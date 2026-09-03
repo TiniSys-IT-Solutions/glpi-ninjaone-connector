@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build and publish release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: curl, json, openssl
+          coverage: none
+      - name: Build installable plugin archive
+        run: ./scripts/build-release.sh "${GITHUB_REF_NAME}"
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          ARCHIVE="dist/glpi-ninjaone-connector-${VERSION}.zip"
+          gh release create "${GITHUB_REF_NAME}" "${ARCHIVE}" \
+            --title "GLPI NinjaOne Connector ${GITHUB_REF_NAME}" \
+            --generate-notes

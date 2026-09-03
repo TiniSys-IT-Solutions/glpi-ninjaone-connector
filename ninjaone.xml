@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <name>GLPI NinjaOne Connector</name>
+  <key>ninjaone</key>
+  <state>stable</state>
+  <logo>https://raw.githubusercontent.com/TiniSys-IT-Solutions/glpi-ninjaone-connector/main/resources/images/glpi-ninjaone-connector-logo.png</logo>
+  <description>NinjaOne asset synchronization connector for GLPI 11.</description>
+  <homepage>https://github.com/TiniSys-IT-Solutions/glpi-ninjaone-connector</homepage>
+  <download>https://github.com/TiniSys-IT-Solutions/glpi-ninjaone-connector/releases</download>
+  <issues>https://github.com/TiniSys-IT-Solutions/glpi-ninjaone-connector/issues</issues>
+  <readme>https://github.com/TiniSys-IT-Solutions/glpi-ninjaone-connector#readme</readme>
+  <authors><author>TiniSys IT Solutions</author></authors>
+  <license>GPLv3+</license>
+  <langs><lang>fr_FR</lang><lang>en_GB</lang><lang>en_US</lang></langs>
+  <tags><tag>inventory</tag><tag>rmm</tag><tag>ninjaone</tag><tag>synchronization</tag></tags>
+  <versions>
+    <version>
+      <num>0.1.0</num>
+      <compatibility>^11.0</compatibility>
+      <download_url>https://github.com/TiniSys-IT-Solutions/glpi-ninjaone-connector/releases/download/v0.1.0/glpi-ninjaone-connector-0.1.0.zip</download_url>
+    </version>
+  </versions>
+</root>

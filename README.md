@@ -277,6 +277,10 @@ Focused fixes and improvements are welcome. Read the
 [contribution guide](CONTRIBUTING.md) before opening a pull request. User-facing
 changes should also be recorded in the [changelog](CHANGELOG.md).
 
+Installable ZIP archives are built automatically for version tags and
+published as GitHub Release assets. Generated packages remain local under the
+ignored `dist/` directory and are never committed to the source repository.
+
 ## Project identity
 
 This connector is independently developed and maintained by TiniSys IT
