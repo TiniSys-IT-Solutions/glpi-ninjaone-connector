@@ -1,10 +1,15 @@
 <p align="center">
+
+> Branche `glpi-v12` : version 0.2.0 pour GLPI 12.0.x et PHP 8.3+.
+> Les versions GLPI 11 restent disponibles sur `main` et dans les tags précédents.
+> Migration en cours de revue ; voir `docs/GLPI12_MIGRATION.md` pour les contrôles et limites.
+
   <img src="resources/images/glpi-ninjaone-connector-logo.png" alt="GLPI NinjaOne Connector" width="420">
 </p>
 <p align="center">
-  <img src="https://img.shields.io/badge/GLPI-11.x-blue?style=for-the-badge&logo=glpi" alt="GLPI 11" />
+  <img src="https://img.shields.io/badge/GLPI-12.x-blue?style=for-the-badge&logo=glpi" alt="GLPI 12" />
   <img src="https://img.shields.io/badge/NinjaOne-API-orange?style=for-the-badge" alt="NinjaOne API" />
-  <img src="https://img.shields.io/badge/PHP-8.2+-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8.2+" />
+  <img src="https://img.shields.io/badge/PHP-8.3+-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP 8.3+" />
   <img src="https://img.shields.io/badge/PowerShell-7+-5391FE?style=for-the-badge&logo=powershell&logoColor=white" alt="PowerShell 7+" />
 </p>
 <p align="center">
@@ -16,7 +21,7 @@
 
 # GLPI NinjaOne Connector
 
-GLPI NinjaOne Connector is a GLPI 11 plugin that links NinjaOne devices to native GLPI assets. It discovers NinjaOne organizations and locations, lets administrators map them explicitly to GLPI entities and locations, and synchronizes computers without turning NinjaOne into the GLPI source of truth.
+GLPI NinjaOne Connector is a GLPI 12 plugin that links NinjaOne devices to native GLPI assets. It discovers NinjaOne organizations and locations, lets administrators map them explicitly to GLPI entities and locations, and synchronizes computers without turning NinjaOne into the GLPI source of truth.
 <img width="1628" height="388" alt="image" src="https://github.com/user-attachments/assets/2be74ae9-07b1-4d8b-a5a3-b2f832243661" />
 
 ## Purpose
@@ -50,8 +55,8 @@ The connector is designed around a clear split of responsibilities:
 
 ## Requirements
 
-- GLPI 11.x.
-- PHP 8.2 or newer.
+- GLPI 12.x.
+- PHP 8.3 or newer.
 - PHP extensions: `curl`, `json`, `openssl`.
 - Outbound HTTPS access from the GLPI server to the NinjaOne instance.
 - A NinjaOne Services API application using Client Credentials.

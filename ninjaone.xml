@@ -15,6 +15,11 @@
   <tags><tag>inventory</tag><tag>rmm</tag><tag>ninjaone</tag><tag>synchronization</tag></tags>
   <versions>
     <version>
+      <num>0.2.0</num>
+      <compatibility>^12.0</compatibility>
+      <download_url>https://github.com/TiniSys-IT-Solutions/glpi-ninjaone-connector/releases/download/v0.2.0/glpi-ninjaone-connector-0.2.0.zip</download_url>
+    </version>
+    <version>
       <num>0.1.0</num>
       <compatibility>^11.0</compatibility>
       <download_url>https://github.com/TiniSys-IT-Solutions/glpi-ninjaone-connector/releases/download/v0.1.0/glpi-ninjaone-connector-0.1.0.zip</download_url>

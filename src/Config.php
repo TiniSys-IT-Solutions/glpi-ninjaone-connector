@@ -8,7 +8,7 @@ use Html;
 
 class Config extends CommonDBTM
 {
-    public static $rightname = 'config';
+    public static string $rightname = 'config';
 
     public static function getTable($classname = null): string
     {
