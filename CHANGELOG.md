@@ -2,6 +2,14 @@
 
 All notable public changes to GLPI NinjaOne Connector are documented here.
 
+## 0.2.0 - 2026-11-04
+
+### Changed
+
+- Target GLPI 12.0.x and PHP 8.3 or newer on the dedicated migration branch.
+- Match native typed model properties and use PHP class names for item types.
+- Validate native model loading, plugin lifecycle and synthetic regressions against GLPI 12.0.1.
+
 ## [0.1.0] - 2026-09-03
 
 ### Added

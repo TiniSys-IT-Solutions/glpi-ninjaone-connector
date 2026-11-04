@@ -31,6 +31,8 @@ mkdir -p "${PACKAGE_DIR}"
 
 rsync -a ./ "${PACKAGE_DIR}/" \
   --exclude '.git/' --exclude '.github/' --exclude 'dist/' \
+  --exclude '.local/' --exclude '.agents/' --exclude '.codex/' --exclude '.aws/' \
+  --exclude '.env*' --exclude 'AGENTS.md' --exclude 'tests/' \
   --exclude 'vendor/' --exclude 'scripts/' --exclude 'tools/' \
   --exclude '.gitignore' --exclude 'composer.lock' \
   --exclude '*~'

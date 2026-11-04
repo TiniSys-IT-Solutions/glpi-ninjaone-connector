@@ -8,7 +8,7 @@ use Computer;
 
 final class ComputerLink extends CommonDBTM
 {
-    public static $rightname = 'computer';
+    public static string $rightname = 'computer';
 
     public static function getTable($classname = null): string
     {
@@ -22,7 +22,7 @@ final class ComputerLink extends CommonDBTM
 
     public function getTabNameForItem(CommonGLPI $item, $withtemplate = 0)
     {
-        if ($item->getType() !== Computer::class || (int) $item->getID() <= 0) {
+        if ($item::class !== Computer::class || (int) $item->getID() <= 0) {
             return '';
         }
 
@@ -33,7 +33,7 @@ final class ComputerLink extends CommonDBTM
 
     public static function displayTabContentForItem(CommonGLPI $item, $tabnum = 1, $withtemplate = 0)
     {
-        if ($item->getType() === Computer::class) {
+        if ($item::class === Computer::class) {
             self::showForComputer((int) $item->getID());
         }
 
@@ -44,7 +44,7 @@ final class ComputerLink extends CommonDBTM
     {
         $item = $params['item'] ?? null;
         if (!$item instanceof CommonDBTM
-            || $item->getType() !== Computer::class
+            || $item::class !== Computer::class
             || (int) $item->getID() <= 0) {
             return;
         }

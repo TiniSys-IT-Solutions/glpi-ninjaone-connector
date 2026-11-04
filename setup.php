@@ -8,10 +8,10 @@ use GlpiPlugin\Ninjaone\OrganizationMapping;
 use GlpiPlugin\Ninjaone\ComputerLink;
 use GlpiPlugin\Ninjaone\SyncLog;
 
-define('PLUGIN_NINJAONE_VERSION', '0.1.0');
+define('PLUGIN_NINJAONE_VERSION', '0.2.0');
 define('PLUGIN_NINJAONE_SCHEMA_VERSION', '1.1.0');
-define('PLUGIN_NINJAONE_MIN_GLPI_VERSION', '11.0.0');
-define('PLUGIN_NINJAONE_MAX_GLPI_VERSION', '11.99.99');
+define('PLUGIN_NINJAONE_MIN_GLPI_VERSION', '12.0.0');
+define('PLUGIN_NINJAONE_MAX_GLPI_VERSION', '12.1.0');
 
 function plugin_init_ninjaone(): void
 {
@@ -30,7 +30,6 @@ function plugin_init_ninjaone(): void
         ],
     ]);
 
-    $PLUGIN_HOOKS['csrf_compliant']['ninjaone'] = true;
     if (Session::haveRight('config', UPDATE)) {
         $PLUGIN_HOOKS[Hooks::CONFIG_PAGE]['ninjaone'] = 'front/config.php';
     }
@@ -54,7 +53,7 @@ function plugin_version_ninjaone(): array
                 'max' => PLUGIN_NINJAONE_MAX_GLPI_VERSION,
             ],
             'php' => [
-                'min'  => '8.2',
+                'min'  => '8.3',
                 'exts' => [
                     'curl' => [
                         'required' => true,
@@ -73,8 +72,13 @@ function plugin_version_ninjaone(): array
 
 function plugin_ninjaone_check_prerequisites(): bool
 {
-    if (version_compare(GLPI_VERSION, PLUGIN_NINJAONE_MIN_GLPI_VERSION, '<')) {
-        echo 'This plugin requires GLPI >= ' . PLUGIN_NINJAONE_MIN_GLPI_VERSION;
+    if (
+        !defined('GLPI_VERSION')
+        || version_compare(GLPI_VERSION, PLUGIN_NINJAONE_MIN_GLPI_VERSION, '<')
+        || version_compare(GLPI_VERSION, PLUGIN_NINJAONE_MAX_GLPI_VERSION, '>=')
+        || version_compare(PHP_VERSION, '8.3.0', '<')
+    ) {
+        echo 'This plugin requires GLPI 12.0.x and PHP 8.3 or newer.';
         return false;
     }
 
